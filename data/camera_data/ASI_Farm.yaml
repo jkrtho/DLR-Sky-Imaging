@@ -1,23 +1,24 @@
 # Licensed under the Apache License: http://www.apache.org/licenses/LICENSE-2.0
 # For details: https://github.com/DLR-SF/sky_imaging/blob/main/NOTICE.txt
 
-camera_name: 'ASI Template'
-camera_model: ''  # e.g. Q25
-mounted: !!timestamp '2002-02-02T00:00:00+01:00'
-demounted: !!timestamp '2003-03-03T00:00:00+01:00'
-latitude: 37.091573
-longitude: -2.363595
-altitude: 500.
-timezone: 'GMT+1' # timezone of the images (daylight saving not expected), in the regular ISO 8601 convention
+camera_name: 'Farm'
+camera_model: 'Pyranovision'  # e.g. Q25
+mounted: !!timestamp '2025-02-02T00:00:00+01:00'
+demounted: !!timestamp '2026-04-03T00:00:00+01:00'
+# 55.695743224016404, 12.105264587541276
+latitude: 55.695743224016404
+longitude: 12.105264587541276
+altitude: 18.58
+timezone: 'Europe/Berlin' # timezone of the images (daylight saving not expected), in the regular ISO 8601 convention
 # -- Positive east of Greenwich
 min_ele_evaluated: 0.0  # specify angle in degrees below which image information should be ignored
 internal_calibration:
   # Polynomial coefficients F(p)=ss[0]*p^0+...+ss[3]*p^3, that are needed to map a pixel point from the image
   # coordinate system (2D) onto a point in the camera coordinate system (3D).
-  ss: [-654.145988014425, 0.00000000e+00, 0.000265315915271894, 4.52819009422508e-07]
+  ss: [-878., 0.00000000e+00, 0.00028419112154481804, 7.678105470505992e-08]
   # center point of camera in pixels, starting at 0 (C convention)
-  xc: 1008
-  yc: 1007
+  xc: 1538
+  yc: 2020
   # The affine transformation parameters c, d, e form the matrix A = [c, d; e, 1] used by Scaramuzza, D., et al. (2006).
   # A Toolbox for Easily Calibrating Omnidirectional Cameras. RSJ International Conference on Intelligent Robots and
   # Systems  Beijing, China.
@@ -25,19 +26,19 @@ internal_calibration:
   c: 1.0
   d: 0.0
   e: 0.0
-  width: 2016
-  height: 2016
+  width: 4056
+  height: 3040
 # Intrinsic euler angles [alpha, beta, gamma]
-external_orientation: [0.0, 3.14, 1.58]
-camera_mask_file: 'camera_masks/mask_template.mat'
+external_orientation: [-0.0050583, 3.1363502882744414, 1.7487538175272899]
+camera_mask_file: 'camera_masks/mask_Farm.mat'
 celestial_coordinate_masks: "generate"
 exposure_settings:
   tolerance_timestamp: [-2, 12]  # tolerated deviation in seconds between requested timestamp and actual image timestamp
   color_temperature: 10000.0  # [Kelvin]
   rel_exp_tol: 0.1 # [-] relative deviation of exposure time tolerated
   exposure_times:
-    day: [160]  # in microseconds, in our convention stated in image name and in image header/ meta information
-    night: [80000]  # in microseconds, in our convention stated in image name and in image header/ meta information
+    day: [0]  # in microseconds, in our convention stated in image name and in image header/ meta information
+    night: [0]  # in microseconds, in our convention stated in image name and in image header/ meta information
 
 radiometric_model:
   beta_planck: [0.21622656, 0.31344352, 0.47032992]  # [-]
