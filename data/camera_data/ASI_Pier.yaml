@@ -3,7 +3,7 @@
 
 camera_name: 'Pier'
 camera_model: 'Pyranovision'  # e.g. Q25
-mounted: !!timestamp '2025-02-02T00:00:00+01:00'
+mounted: !!timestamp '2025-06-30T00:00:00+01:00'
 demounted: !!timestamp '2026-04-03T00:00:00+01:00'
 # 55.69164955857471, 12.081997343962948
 latitude: 55.69164955857471

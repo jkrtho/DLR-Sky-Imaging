@@ -3,7 +3,7 @@
 
 camera_name: 'Wind'
 camera_model: 'Pyranovision'  # e.g. Q25
-mounted: !!timestamp '2025-02-02T00:00:00+01:00'
+mounted: !!timestamp '2025-06-30T00:00:00+01:00'
 demounted: !!timestamp '2026-04-03T00:00:00+01:00'
 # 55.68915288744257, 12.10053017715683
 latitude: 55.68915288744257
@@ -15,7 +15,7 @@ min_ele_evaluated: 0.0  # specify angle in degrees below which image information
 internal_calibration:
   # Polynomial coefficients F(p)=ss[0]*p^0+...+ss[3]*p^3, that are needed to map a pixel point from the image
   # coordinate system (2D) onto a point in the camera coordinate system (3D).
-  ss: [-848., 0.00000000e+00, 0.000238323676668763, 7.318869311159456e-08]
+  ss: [-660.145988014425, 0.00000000e+00, 0.000265315915271894, 4.52819009422508e-07]
   # center point of camera in pixels, starting at 0 (C convention)
   xc: 1553
   yc: 1957
@@ -29,7 +29,7 @@ internal_calibration:
   width: 4056
   height: 3040
 # Intrinsic euler angles [alpha, beta, gamma]
-external_orientation: [-0.04750153764064524, 3.2188634634274362, 4.573455971]
+external_orientation: [-0.0, 3.14, 0]
 camera_mask_file: 'camera_masks/mask_Wind.mat'
 celestial_coordinate_masks: "generate"
 exposure_settings:

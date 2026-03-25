@@ -46,7 +46,7 @@ Calibration:  # parameters defining the calibration procedure
       circularity_threshold: 0.8
   sun_detection:
     number_days: 360  # number of days prior to 'last_timestamp' to be included
-    sampling_time: 1 # minutes, use one sky image every 'sampling_time' minutes
+    sampling_time: 10 # minutes, use one sky image every 'sampling_time' minutes
     thresholds:
       min_area: 100 # pixels, minimum area of valid orb observation; small enough to detect the orb but large enough not to
       # detect other lights
@@ -58,7 +58,7 @@ Calibration:  # parameters defining the calibration procedure
     sampling_time: 1 # minutes, use one sky image every 'sampling_time' minutes
     number_days: 28  # number of days prior to 'last_timestamp' to be included
   sun_validation:
-    sampling_time: 1 # minutes, use one sky image every 'sampling_time' minutes
+    sampling_time: 10 # minutes, use one sky image every 'sampling_time' minutes
     number_days: 360  # number of days prior to 'last_timestamp' to be included
   ss_statistics:
     mean: !!python/tuple [-653.3, 2.677e-4, 4.498e-07]

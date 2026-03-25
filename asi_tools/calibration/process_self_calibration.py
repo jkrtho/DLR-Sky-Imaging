@@ -128,7 +128,7 @@ def calibrate_from_images(last_timestamp_calibration):
     logging.info(f'Orientation in optimized camera model {np.rad2deg(calib.camera.external_orientation)}')
     logging.info(f'x,y_center {(calib.ocam.x_center, calib.ocam.y_center)}')
 
-    results_dict = {'x_center': float(calib.ocam.x_center), 'y_center': float(calib.ocam.y_center),
+    results_dict = {'x_center': float(calib.ocam.x_center[0]), 'y_center': float(calib.ocam.y_center[0]),
                     'ss': [float(si) for si in calib.ocam.ss],
                     'external_orientation': [float(eori) for eori in calib.camera.external_orientation]}
 

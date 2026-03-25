@@ -46,12 +46,12 @@ Calibration:  # parameters defining the calibration procedure
       circularity_threshold: 0.6
   sun_detection:
     number_days: 360  # number of days prior to 'last_timestamp' to be included
-    sampling_time: 10 # minutes, use one sky image every 'sampling_time' minutes
+    sampling_time: 30 # minutes, use one sky image every 'sampling_time' minutes
     thresholds:
       min_area: 100 # pixels, minimum area of valid orb observation; small enough to detect the orb but large enough not to
       # detect other lights
-      max_area: 100000 # pixels, maximum area of valid orb observation; small enough to reject very turbid situations
-      intensity_threshold: 250
+      max_area: 50000 # pixels, maximum area of valid orb observation; small enough to reject very turbid situations
+      intensity_threshold: 240
       aspect_ratio_tolerance: 0.15
       circularity_threshold: 0.6
   moon_validation:
